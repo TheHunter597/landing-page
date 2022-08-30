@@ -30,7 +30,6 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footer__content}>
         <div className={styles.footer__logo}>
-          {/* <img src={logo} alt="logo" /> */}
           <Image src={logo} alt="logo" height={35} width={160} />
         </div>
 

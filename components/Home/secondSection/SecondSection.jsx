@@ -81,7 +81,7 @@ function SecondSection() {
     activeNum: 1,
     showButtons: false,
   });
-  console.log(state.showButtons);
+
   let result = data.map((entry) => {
     return (
       <Card
