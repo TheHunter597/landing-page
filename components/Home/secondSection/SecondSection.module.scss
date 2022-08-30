@@ -1,0 +1,151 @@
+@import "../../../utilits/utilits.scss";
+
+.secondSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  overflow-x: auto;
+  max-width: auto;
+  height: 100%;
+  position: relative;
+  overflow-x: hidden;
+  @media (max-width: 600px) {
+    margin-top: 0;
+  }
+  &__cards {
+    display: grid;
+    max-width: auto;
+    margin-inline: auto;
+    grid-auto-flow: column;
+    grid-auto-columns: 40%;
+    column-gap: 4rem;
+    margin-bottom: 3rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    transition: all 0.1s;
+    will-change: transform;
+    width: auto;
+    // z-index: 10;
+    height: auto;
+    &__buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      position: absolute;
+      top: 51%;
+      z-index: 1;
+      button {
+        border: none;
+        background-color: transparent;
+        color: $primary-red;
+        font-size: 2.5rem;
+        margin: 0 1.5rem;
+        cursor: pointer;
+        transition: all 0.7s;
+        &:hover {
+          transform: scale(1.3);
+        }
+        &:active {
+          transform: scale(1.1);
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      position: relative;
+      display: block;
+      height: 26rem;
+      width: 90%;
+    }
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  &__title {
+    font-size: $fs-extra;
+    margin: 4rem 0rem;
+    color: $primary-blue;
+    text-align: center;
+    @media (max-width: 600px) {
+      font-size: $fs-large;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+  &__dots {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 5rem;
+    div {
+      border-radius: 50%;
+      border: 2px solid $primary-red;
+      width: 0.7rem;
+      height: 0.7rem;
+      margin: 0.2rem;
+    }
+    .active {
+      background-color: $primary-red;
+    }
+  }
+  &__button {
+    margin-bottom: 9rem;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0rem 4rem;
+  padding-bottom: 2rem;
+  scroll-behavior: smooth;
+  background-image: linear-gradient(
+    180deg,
+    rgba(white, 0) 16%,
+    rgba($neutral-pale-red, 1) 15%
+  );
+  margin-top: 5rem;
+  height: auto;
+  @media (max-width: 600px) {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0 1rem;
+    overflow-y: visible;
+    padding-bottom: 1rem;
+    width: 600px;
+    display: none;
+    max-width: 100%;
+    height: 18rem;
+  }
+  &__active {
+    display: inline-block;
+  }
+  &__image {
+    display: inline-block;
+    margin-bottom: 1rem;
+    @media (max-width: 600px) {
+      margin-bottom: 0rem;
+    }
+  }
+  &__title {
+    font-size: $fs-medium;
+    color: $primary-blue;
+    text-align: center;
+  }
+  &__paragraph {
+    font-size: $fs-tiny;
+    color: $neutral-gray;
+    text-align: center;
+  }
+}

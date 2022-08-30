@@ -1,0 +1,201 @@
+@import "../../../utilits/utilits.scss";
+
+.firstSection {
+  display: grid;
+  width: min(90%, 1100px);
+  margin-inline: auto;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  column-gap: 20px;
+  overflow-x: hidden;
+  margin-top: 8rem;
+  grid-template-areas: " left right";
+  &::after {
+    content: url("../../../public/images/bg-tablet-pattern.svg");
+    z-index: -1;
+    position: absolute;
+    top: 170%;
+    right: 80%;
+  }
+  @media (max-width: 600px) {
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 3.5fr;
+    grid-template-areas:
+      " up "
+      " bottom ";
+  }
+  &__left {
+    grid-area: left;
+    h2 {
+      font-size: $fs-extra;
+      color: $primary-blue;
+      margin-bottom: 2rem;
+    }
+    p {
+      font-size: $fs-small;
+      color: $neutral-gray;
+      width: 60%;
+    }
+    @media (max-width: 600px) {
+      grid-area: up;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      h2 {
+        font-size: 1.75rem;
+        width: 70%;
+        font-weight: $fw-bold;
+      }
+      p {
+        text-align: center;
+        width: 80%;
+      }
+    }
+  }
+  &__right {
+    grid-area: right;
+    @media (max-width: 600px) {
+      grid-area: bottom;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media (max-width: 600px) {
+      padding-left: 1.3rem;
+    }
+  }
+  &__element {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-auto-rows: auto;
+    grid-template-areas: " number info";
+    @media (max-width: 600px) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 2fr 4fr;
+      grid-template-areas:
+        " header "
+        " content ";
+    }
+    &__number {
+      grid-area: number;
+      background-color: $primary-red;
+      height: 24%;
+      width: 70%;
+      border: none;
+      text-align: center;
+      border-radius: 30px;
+      font-weight: $fw-bold;
+      color: white;
+      font-size: $fs-small;
+      margin-top: 1.5rem;
+      @media (max-width: 600px) {
+        width: 22%;
+        height: 2.4rem;
+        margin: 0;
+        padding: 0.4rem 0.5rem;
+        margin-right: 0.4rem;
+      }
+    }
+    &__info {
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 600px) {
+        grid-area: header;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 1rem 0;
+        background-color: $neutral-pale-red;
+      }
+    }
+    &__header {
+      font-size: $fs-tiny;
+      color: $primary-blue;
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+      @media (max-width: 600px) {
+        text-align: center;
+        margin: 0;
+      }
+    }
+    &__paragraph {
+      color: $neutral-gray;
+      font-size: $fs-tiny;
+      @media (max-width: 600px) {
+        grid-area: content;
+        width: 90%;
+      }
+    }
+  }
+}
+
+// @media (max-width: 600px) {
+//   .firstSection {
+//     display: grid;
+//     width: 100%;
+//     grid-template-columns: 1fr;
+//     grid-template-rows: 2fr 3.5fr;
+//     grid-template-areas:
+//       " up "
+//       " bottom ";
+//     &__left {
+//       grid-area: up;
+//       text-align: center;
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       h2 {
+//         font-size: 1.75rem;
+//         width: 70%;
+//         font-weight: $fw-bold;
+//       }
+//       p {
+//         text-align: center;
+//         width: 80%;
+//       }
+//     }
+//     &__right {
+//       grid-area: bottom;
+//       .container {
+//         padding-left: 1.3rem;
+//         .element {
+//           display: grid;
+//           grid-template-columns: 1fr;
+//           grid-template-rows: 2fr 4fr;
+//           grid-template-areas:
+//             " header "
+//             " content ";
+//           &__info {
+//             grid-area: header;
+//             display: flex;
+//             flex-direction: row;
+//             align-items: center;
+//             margin: 1rem 0;
+//             background-color: $neutral-pale-red;
+//           }
+//           &__paragraph {
+//             grid-area: content;
+//             width: 90%;
+//           }
+//           &__number {
+//             width: 22%;
+//             height: 2.4rem;
+//             margin: 0;
+//             padding: 0.4rem 0.5rem;
+//             margin-right: 0.4rem;
+//           }
+//           &__header {
+//             text-align: center;
+//             margin: 0;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

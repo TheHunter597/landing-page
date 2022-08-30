@@ -1,0 +1,15 @@
+@import "../styles/index.module.scss";
+
+.button-primary {
+  background-color: $primary-red;
+  border: none;
+  padding: 0.7rem 2rem;
+  border-radius: 30px;
+  font-size: $fs-small;
+  color: white;
+  cursor: pointer;
+  transition: all 0.7s;
+  &:hover {
+    background-color: rgba($primary-red, 0.8);
+  }
+}

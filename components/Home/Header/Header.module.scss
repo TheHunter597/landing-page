@@ -1,0 +1,67 @@
+@import "../../../utilits/utilits.scss";
+
+.Header {
+  height: auto;
+  width: min(1100px, 90%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr 4fr;
+  &::after {
+    content: url("../../../public/images/bg-tablet-pattern.svg");
+    z-index: -1;
+    position: absolute;
+    top: -15%;
+    left: 52%;
+    width: 60%;
+    @media (max-width: 600px) {
+      top: -40%;
+      left: 20%;
+    }
+  }
+  grid-template-areas:
+    " . . "
+    "right left";
+  column-gap: 20px;
+  &__right {
+    grid-area: right;
+  }
+  &__title {
+    font-size: $fs-XXL;
+    color: $primary-blue;
+  }
+  &__paragraph {
+    width: 60%;
+    font-size: $fs-small;
+    color: $neutral-gray;
+    margin: 2rem 0;
+  }
+  &__left {
+    grid-area: left;
+    position: relative;
+  }
+}
+
+@media (max-width: 600px) {
+  .Header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3.5rem;
+    &__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title {
+      font-size: $fs-large;
+      text-align: center;
+    }
+    &__paragraph {
+      text-align: center;
+      width: 90%;
+    }
+  }
+}

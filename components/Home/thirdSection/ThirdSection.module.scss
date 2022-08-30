@@ -1,0 +1,51 @@
+@import "../../../utilits/utilits.scss";
+
+.thirdSection {
+  background-color: $primary-red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 4.1rem 0;
+  &__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-inline: auto;
+    width: min(90%, 1100px);
+    @media (max-width: 600px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__title {
+    color: white;
+    font-size: $fs-extra;
+    font-weight: $fw-bold;
+    width: 45%;
+    line-height: 1;
+    @media (max-width: 600px) {
+      margin-bottom: 3rem;
+      width: 85%;
+      text-align: center;
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    background-color: white !important;
+    color: $primary-red !important;
+    text-align: center;
+    height: 3rem;
+    &:hover {
+      background-color: white;
+      color: rgba($primary-red, 0.6) !important;
+    }
+  }
+}

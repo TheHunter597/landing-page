@@ -1,0 +1,127 @@
+@import "../../../utilits/utilits.scss";
+
+@mixin infoNav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  font-weight: $fw-regular;
+  li {
+    cursor: pointer;
+    transition: all 0.4s;
+    &:hover {
+      color: $primary-red;
+    }
+  }
+}
+
+.footer {
+  background-color: $neutral-dark-blue;
+  padding: 4rem 0;
+  padding-bottom: 2rem;
+  font-size: $fs-footer;
+  @media (max-width: 600px) {
+    padding-bottom: 0rem;
+    padding-top: 2rem;
+  }
+  &__content {
+    width: min(90%, 1100px);
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 0.7fr 1fr 0.9fr 0.7fr 1fr;
+    grid-template-rows: 1.4fr 1.4fr 1fr;
+    grid-template-areas:
+      "logo . nav . info . email"
+      " . . nav . info . ."
+      "contact . nav . . . services";
+    font-size: $fs-footer;
+    color: white;
+    @media (max-width: 600px) {
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 0.4fr 1.5fr 1.2fr 1fr 1fr;
+      grid-template-areas:
+        "email email"
+        ". ."
+        "nav info"
+        "contact contact"
+        "logo logo"
+        "services services";
+      place-items: center;
+    }
+  }
+  &__logo {
+    grid-area: logo;
+  }
+  &__contacts {
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    gap: 0.7rem;
+    @media (max-width: 600px) {
+      gap: 1.8rem;
+    }
+    img {
+      height: 1.3rem;
+      &:hover {
+        color: $primary-red;
+      }
+      @media (max-width: 600px) {
+        height: 2.3rem;
+      }
+    }
+  }
+  &__nav {
+    grid-area: nav;
+    ul {
+      @include infoNav;
+    }
+  }
+  &__info {
+    grid-area: info;
+    ul {
+      @include infoNav;
+    }
+  }
+  &__email {
+    grid-area: email;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.7rem;
+    .input {
+      border-radius: 20px;
+      padding: 0.7rem 1.4rem;
+      border: none;
+      position: relative;
+      &__active {
+        &::placeholder {
+          color: $primary-red;
+        }
+      }
+    }
+  }
+  &__input {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    small {
+      position: absolute;
+      top: 110%;
+      left: 8%;
+      font-weight: $fw-regular;
+      color: $primary-red;
+    }
+  }
+  &__services {
+    grid-area: services;
+    margin-left: 4rem;
+    font-weight: $fw-regular;
+    color: $neutral-gray;
+    @media (max-width: 600px) {
+      margin-left: 0;
+    }
+  }
+}

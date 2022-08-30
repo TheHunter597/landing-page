@@ -1,0 +1,30 @@
+////fonts ////
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+$primary-font: "Roboto";
+
+$fw-regular: 300;
+$fw-semi-bold: 500;
+$fw-bold: 700;
+
+$fs-tiny: 0.85rem;
+$fs-footer: 0.92rem;
+$fs-small: 1rem;
+$fs-medium: 1.5rem;
+$fs-large: 2rem;
+$fs-extra: 2.75rem;
+$fs-XL: 3.25rem;
+$fs-XXL: 3.75rem;
+
+$fs-nav: $fs-small;
+$fs-button: $fs-medium;
+$fs-heading: $fs-large;
+
+////colors////
+/// primary
+$primary-red: hsl(12, 88%, 59%);
+$primary-blue: hsl(228, 39%, 23%);
+/// neutral
+$neutral-gray: hsl(227, 12%, 61%);
+$neutral-dark-blue: hsl(233, 12%, 13%);
+$neutral-pale-red: hsl(13, 100%, 96%);
+$neutral-light-gray: hsl(0, 0%, 98%);
