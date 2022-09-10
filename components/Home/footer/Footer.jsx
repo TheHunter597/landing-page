@@ -30,15 +30,15 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.footer__content}>
         <div className={styles.footer__logo}>
-          <Image src={logo} alt="logo" height={35} width={160} />
+          <Image src={logo} alt="logo" height={35} width={160} fill={"white"} />
         </div>
 
         <div className={styles.footer__contacts}>
-          <Image src={facebook} alt="facebook" height={80} width={160} />
-          <Image src={youtube} alt="youtube" height={80} width={160} />
-          <Image src={twitter} alt="twitter" height={80} width={160} />
-          <Image src={pinterest} alt="pinterest" height={80} width={160} />
-          <Image src={instagram} alt="instagram" height={120} width={160} />
+          <Image src={facebook} alt="facebook" height={65} width={140} />
+          <Image src={youtube} alt="youtube" height={65} width={140} />
+          <Image src={twitter} alt="twitter" height={65} width={140} />
+          <Image src={pinterest} alt="pinterest" height={65} width={140} />
+          <Image src={instagram} alt="instagram" height={65} width={140} />
         </div>
 
         <div className={styles.footer__nav}>

@@ -64,11 +64,14 @@
     }
     img {
       height: 1.3rem;
+      cursor: pointer;
       &:hover {
-        color: $primary-red;
+        svg {
+          fill: $primary-red;
+        }
       }
       @media (max-width: 600px) {
-        height: 2.3rem;
+        height: 2rem;
       }
     }
   }
@@ -101,6 +104,9 @@
           color: $primary-red;
         }
       }
+    }
+    button {
+      padding: 0.7rem 1.5rem;
     }
   }
   &__input {
