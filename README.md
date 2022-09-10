@@ -11,8 +11,13 @@ A challenge that I found on frontend mentor (intermediate diffculty)
 
 - React
 - Next js
-- Typescript
 - Sass
+
+## Dependencies
+
+- [Email Validator](https://www.npmjs.com/package/email-validator)
+- [React Icons](https://www.npmjs.com/package/react-icons)
+- [sass](https://www.npmjs.com/package/sass)
 
 ## Notes
 
